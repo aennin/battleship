@@ -7,7 +7,7 @@ class Gameboard {
     }
 
     placeShip(length, coordinates) {
-        const ship = new Ship(length);
+        const ship = Ship(length);
         this.ships.push({ship, coordinates});
     }
 
