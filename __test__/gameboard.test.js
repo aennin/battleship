@@ -1,4 +1,4 @@
-import Gameboard from "../src/gameboard";
+import Gameboard from "../src/logic/gameboard";
 
 describe('Gameboard', () => {
     let board;

@@ -1,5 +1,5 @@
-import Player from "../src/player";
-import Gameboard from "../src/gameboard";
+import Player from "../src/logic/player";
+import Gameboard from "../src/logic/gameboard";
 
 describe('Player', () => {
     test('player has a gameboard', () => {

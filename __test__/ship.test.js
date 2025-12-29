@@ -1,4 +1,4 @@
-import Ship from "../src/ship";
+import Ship from "../src/logic/ship";
 
 describe('Ship', () => {
     test('stores its length', () => {
