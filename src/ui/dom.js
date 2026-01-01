@@ -17,13 +17,13 @@ const renderBoard = (board, container, isEnemy = false) => {
             });
 
             // ships (player only)
-            if (!isEnemy && board.hasShipAt(coord)) {
+            if (!isEnemy && board.hasShipAt(x, y)) {
                 cell.classList.add('ship');
             }
 
             // Hits (both boards)
-            if (board.hasShipAt(coord) && board.wasHitAt(coord)) {
-                cell.classList.add('hit');
+            if (board.wasHitAt(x, y)) {
+                cell.classList.add(board.hasShipAt(x, y) ? 'hit' : 'miss');
             }
 
             container.appendChild(cell)

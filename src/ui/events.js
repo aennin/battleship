@@ -1,4 +1,4 @@
-import { playerTurn } from "../gameController";
+import { playerTurn, startGame } from "../gameController.js";
 
 const bindBoardEvents = () => {
     document
@@ -15,5 +15,11 @@ const bindBoardEvents = () => {
             playerTurn(coord);
         });
 };
+
+document
+    .querySelector('#randomize')
+    .addEventListener('click', () => {
+        startGame();
+    });
 
 export {bindBoardEvents};

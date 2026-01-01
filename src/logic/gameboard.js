@@ -1,4 +1,4 @@
-import Ship from './ship';
+import Ship from './ship.js';
 
 class Gameboard {
     constructor() {
@@ -31,12 +31,12 @@ class Gameboard {
         this.ships.push(ship);
 
         coordinates.forEach(([x, y]) => {
-            this.occupiedCoords.set(`${x}, ${y}`, ship);
+            this.occupiedCoords.set(`${x},${y}`, ship);
         });
     }
 
     receiveAttack([x, y]) {
-        const key = `${x}, ${y}`;
+        const key = `${x},${y}`;
 
         if (this.occupiedCoords.has(key)) {
             this.occupiedCoords.get(key).hit();
@@ -49,12 +49,12 @@ class Gameboard {
     }
 
     hasShipAt(x, y) {
-        return this.occupiedCoords.has(`${x}, ${y}`);
+        return this.occupiedCoords.has(`${x},${y}`);
     }
 
     wasHitAt(x, y) {
         return (
-            this.hits.some((hx, hy) => hx === x && hy === y) || 
+            this.hits.some(([hx, hy]) => hx === x && hy === y) || 
             this.missedAttacks.some(([mx, my]) => mx === x && my === y)
         );
     }

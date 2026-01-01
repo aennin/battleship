@@ -1,5 +1,5 @@
-import Player from './logic/player'
-import { renderBoards } from './ui/dom'
+import Player from './logic/player.js';
+import { renderBoards } from './ui/dom.js';
 
 let player;
 let computer;
